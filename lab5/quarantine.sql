@@ -4,7 +4,7 @@ prompt
 prompt Create a quarantine:
 prompt
 
-set echo on
+set echo on pause on
 
 select sql_id from v$sql where sql_text = 'select b.*, a.* from customers a, customers b';
 
@@ -16,25 +16,25 @@ select sql_id from v$sql where sql_text = 'select b.*, a.* from customers a, cus
       end;
 /
 
-set echo off
+set echo off pause off
 
 prompt
 prompt Attempt to run the quarantined SQL:
 prompt
 
-set echo on
+set echo on pause on
 
 select a.*, b.* from customers a, customers b;
 
-set echo off
+set echo off pause off
 
 prompt
 prompt Explain plan fails on quarantined SQL:
 prompt
 
-set echo on
+set echo on pause on
 
 explain plan for
 select a.*, b.* from customers a, customers b;
 
-set echo off
+set echo off pause off

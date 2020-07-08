@@ -8,8 +8,8 @@ col start_time for a35
 col status for a15
 col opid for 9999
 
-set echo on
+set echo on pause on
 
 select opid, status, start_time from dba_auto_stat_executions;
 
-set echo off
+set echo off pause off

@@ -16,7 +16,7 @@ set echo on timing on
           val                 number;
     begin
 
-      for i in 1..1000
+      for i in 1..100
      loop
 
              select count(customer_id)

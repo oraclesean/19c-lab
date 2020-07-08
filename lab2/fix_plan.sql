@@ -70,3 +70,5 @@ set pages 30 pause on echo on
 select :rep report from dual;
 
 set echo off pause off
+conn demo/demo@labpdb1
+conn demo/demo@labpdb1

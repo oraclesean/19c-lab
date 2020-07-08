@@ -1,16 +1,8 @@
-conn sh/sh@labpdb1
-set echo off pause off
-
-prompt
-show user
-prompt
-show con_name
-
 prompt
 prompt Create a table and prevent stats gathering:
 prompt
 
-set echo on
+set echo on pause on
 
 create table stale as select * from sales where 1 = 2;
   insert /*+ APPEND no_gather_optimizer_statistics */ into stale(prod_id, cust_id, time_id, channel_id, promo_id, quantity_sold, amount_sold)
@@ -18,6 +10,6 @@ create table stale as select * from sales where 1 = 2;
     from sales;
 commit;
 
-set echo off
+set echo off pause off
 
-@table_info
+@/home/oracle/lab4/table_info

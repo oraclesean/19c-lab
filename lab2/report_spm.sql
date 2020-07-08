@@ -1,10 +1,5 @@
 set echo off
 
-prompt
-show user
-prompt
-show con_name
-
 col parameter_value for a45
 col parameter_name for a25
 
@@ -12,7 +7,7 @@ prompt
 prompt SQL Plan Managment Parameter Settings:
 prompt
 
-set echo on
+set echo on pause on
 
   select parameter_name
 ,        parameter_value
@@ -21,4 +16,4 @@ set echo on
      and parameter_value != 'UNUSED'
 order by 1;
 
-set echo off
+set echo off pause off

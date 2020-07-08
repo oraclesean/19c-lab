@@ -2,7 +2,7 @@ prompt
 prompt Observe the correct NESTED LOOPS JOIN plan for skewed data. 
 prompt
 
-set timing on echo on pause off
+set timing on echo on pause on
 
   select /*+ NO_ADAPTIVE_PLAN */
          sum(tab1.c)
@@ -13,6 +13,4 @@ set timing on echo on pause off
 
 set timing off echo off
 
-prompt
-
-@xplan
+@/home/oracle/lab2/xplan

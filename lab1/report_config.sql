@@ -1,9 +1,3 @@
-conn demo/demo@labpdb2
-prompt
-show user
-prompt
-show con_name
-
 set pages 30 verify off
 
 col parameter_name for a35

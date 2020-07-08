@@ -4,9 +4,9 @@ prompt
 prompt Plan for a query against SALES:
 prompt
 
-set echo on
+set echo on pause on
 
 select count(*) from sales where quantity_sold > 2;
 select * from table(dbms_xplan.display_cursor(format => 'TYPICAL'));
 
-set echo off
+set echo off pause off

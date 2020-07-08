@@ -1,7 +1,7 @@
 set echo off
 
 prompt
-prompt Turn on High-Frequency Statistics Gathering
+prompt Turn off High-Frequency Statistics Gathering
 prompt
 
 set echo on

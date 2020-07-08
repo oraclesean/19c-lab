@@ -1,10 +1,3 @@
-conn sh/sh@labpdb1
-
-prompt
-show user
-prompt
-show con_name
-
 col column_name for a13
 col low_value for a14
 col high_value for a14
@@ -17,10 +10,10 @@ prompt
 prompt Gather statistics on the SALES table:
 prompt
 
-set echo on
+set echo on pause on
 
 exec dbms_stats.gather_table_stats('SH', 'SALES', method_opt => 'FOR ALL COLUMNS SIZE 2');
 
-set echo off
+set echo off pause off
 
-@show_stats
+@/home/oracle/lab3/show_stats

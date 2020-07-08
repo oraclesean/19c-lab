@@ -5,14 +5,13 @@ prompt Display privilege analysis results
 prompt
 
 col username for a4
-col sys_priv for a20
-col used_role for a18
+col sys_priv for a35
+col used_role for a20
 col path for a72
 col obj_priv for a10
 col object_owner head OWNER for a8
 col object_name for a25
 col object_type for a15
-col used_role for a10
 
 prompt
 prompt System privileges used by the DEMO user:

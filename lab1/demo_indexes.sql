@@ -1,8 +1,3 @@
-conn demo/demo@labpdb2
-prompt
-show user
-prompt
-show con_name
 col table_name for a20
 col index_name for a20
 col index_type for a10
@@ -23,6 +18,7 @@ set echo on pause on
 ,        i.table_type
 ,        i.index_name
 ,        i.index_type
+,        i.visibility
 ,        i.auto
 ,        c.column_name
     from user_indexes         i

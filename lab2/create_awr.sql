@@ -1,5 +1,5 @@
 set pause off echo off
-@snap
+@/home/oracle/lab2/snap
 
 prompt
 prompt Run the HASH JOIN multiple times:
@@ -11,7 +11,7 @@ set echo on timing on
           n1 number(10);
           n2 number(10);
     begin
-      for i in 1..100
+      for i in 1..50
      loop
           execute immediate 'select /*+ NO_ADAPTIVE_PLAN */ sum(tab1.c), sum(tab2.c) from tab1, tab2 where tab1.a = tab2.a and tab1.d = 10' into n1, n2;
  end loop;
@@ -20,4 +20,4 @@ set echo on timing on
 
 set echo off timing off
 
-@snap
+@/home/oracle/lab2/snap
